@@ -98,7 +98,7 @@ The project includes a comprehensive test suite using Vitest. Tests can be run u
 pnpm dev
 ```
 
-> **Important**: Always ensure your development database exists and migrations are up to date before starting the backend locally. If you make any changes to the database schema, run `pnpm db:migrate` again to apply the changes.
+> **Important**: Always ensure your development database exists and migrations are up to date before starting the backend locally. If you make any changes to the database schema, run `pnpm db:generate` and then `pnpm db:migrate` again to apply the changes.
 
 ## License
 
