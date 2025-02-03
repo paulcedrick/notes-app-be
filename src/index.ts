@@ -9,17 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// JSON parsing error handler
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if (err instanceof SyntaxError && 'body' in err) {
-    return res.status(400).json({
-      error: 'Invalid JSON',
-      message: 'The request body contains malformed JSON'
-    });
-  }
-  next(err);
-});
-
 app.get("/healthcheck", (req, res) => {
   res.send({ timestamp: new Date().toISOString(), status: "ok" });
 });
