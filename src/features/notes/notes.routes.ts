@@ -1,7 +1,6 @@
 import { createNoteValidator, getNoteParamsValidator, updateNoteValidator } from "@/features/notes/notes.validator.ts";
 import express, { Router } from "express";
 import { validator } from "@/shared/validator.ts";
-import { z } from "zod";
 import { createNote, getNote, updateNote, deleteNote, getAllNotes } from "@/features/notes/notes.services.ts";
 
 const router: Router = express.Router();

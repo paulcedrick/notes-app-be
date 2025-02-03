@@ -1,5 +1,5 @@
 import "dotenv/config";
-import express, { Request, Response, NextFunction } from "express";
+import express from "express";
 import cors from "cors";
 
 import notesRoutes from "@/features/notes/notes.routes.ts";

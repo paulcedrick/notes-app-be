@@ -13,6 +13,7 @@ type ValidatorHandler<TSchema extends ValidatorSchema> = (options: {
   params: TSchema["params"] extends z.ZodTypeAny ? z.infer<TSchema["params"]> : undefined;
   req: Request;
   res: Response;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }) => Promise<any>;
 
 export const validator = <TSchema extends ValidatorSchema>(
